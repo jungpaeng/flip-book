@@ -1,0 +1,8 @@
+{
+  "name": "remind-it",
+  "version": "0.1.0",
+  "description": "Remind what you have to do.",
+  "repository": "https://github.com/jungpaeng/remind-it.git",
+  "author": "jungpaeng",
+  "license": "MIT"
+}
