@@ -1,0 +1,138 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {}
+    },
+    "import/external-module-folders": [
+      "node_modules",
+      "node_modules/@types"
+    ],
+    "import/internal-regex": "^@src/"
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.js"
+      ],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",  // eslint-config-prettier
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "prettier",
+    "react",
+    "react-hooks"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "webextensions": true
+  },
+  "rules": {
+    // Disable config to avoid conflict with prettier config
+    "max-len": [
+      "error",
+      {
+        "tabWidth": 2,
+        "code": 120,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "quotes": "off",
+    "comma-dangle": "off",
+    "object-curly-spacing": "off",
+    "array-bracket-spacing": "off",
+    // import
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          [
+            "builtin",
+            "external"
+          ],
+          "internal",
+          [
+            "parent",
+            "sibling",
+            "index"
+          ]
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "import/default": "off",
+    "import/no-unresolved": "error",
+    "import/no-named-as-default-member": "off",
+    // react
+    "react/display-name": "off",
+    "react/prop-types": "off",
+    // rules
+    "no-restricted-imports": "off",
+    "no-undef": "error",
+    "no-unused-vars": "off",
+    "no-warning-comments": [
+      "off"
+    ],
+    // Tslint
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": true,
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/no-use-before-define": "off",
+    // react-hooks
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": [
+      "off"
+    ]
+  }
+}
