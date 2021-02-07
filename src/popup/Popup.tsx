@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import GlobalStyle from './lib/style/GlobalStyle';
+import GlobalStyle from '../common/lib/style/GlobalStyle';
 
 function Popup() {
   return (
