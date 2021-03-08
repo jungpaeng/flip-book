@@ -1,8 +1,8 @@
 {
-  "name": "Remind it",
+  "name": "Flip Book",
   "version": "0.1.0",
   "manifest_version": 2,
-  "description": "Remind what you have to do.",
+  "description": "Save content to flip book",
   "permissions": ["contextMenus"],
   "browser_action": {
     "default_popup": "popup.html"
