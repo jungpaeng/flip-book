@@ -1,3 +1,4 @@
-import { ContextMenuService } from './service';
+import { ContextMenuEventService, ContextMenuService } from './service';
 
 ContextMenuService.createImageContextMenu();
+ContextMenuEventService.addClickEventListener();
